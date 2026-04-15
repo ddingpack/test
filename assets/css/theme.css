@@ -1,0 +1,15 @@
+
+.site-sidebar{scrollbar-width:thin;scrollbar-color:#46484d transparent}
+.site-sidebar::-webkit-scrollbar{width:4px}
+.site-sidebar::-webkit-scrollbar-thumb{background:#46484d;border-radius:999px}
+.mobile-drawer.show{display:block}
+.welcome-overlay{position:fixed;inset:0;z-index:90;display:none;align-items:center;justify-content:center;background:rgba(12,14,19,.78);backdrop-filter:blur(12px);padding:24px}
+.welcome-overlay.show{display:flex}
+.welcome-card{width:min(640px,100%);background:#171a1f;border:1px solid rgba(70,72,77,.15);border-radius:.75rem;padding:2rem;box-shadow:0 24px 48px rgba(0,0,0,.45);text-align:left}
+.welcome-card img{width:96px;height:96px;object-fit:contain;margin-bottom:1rem}
+.welcome-card .eyebrow{display:inline-block;margin-bottom:.5rem;color:#9fa7ff;font-size:.7rem;font-weight:700;letter-spacing:.28em;text-transform:uppercase}
+@media (max-width: 767px){
+  .site-sidebar{display:none!important}
+  main{padding-left:0!important}
+  header{left:0!important}
+}
