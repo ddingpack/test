@@ -22,12 +22,6 @@
   document.querySelectorAll('[data-mobile-menu]').forEach(btn => btn.addEventListener('click', openDrawer));
   document.querySelectorAll('[data-mobile-close]').forEach(btn => btn.addEventListener('click', closeDrawer));
 
-  const assist = document.querySelector('[data-assist]');
-  const openAssist = () => assist?.classList.remove('hidden');
-  const closeAssist = () => assist?.classList.add('hidden');
-  document.querySelectorAll('[data-assist-open]').forEach(btn => btn.addEventListener('click', openAssist));
-  document.querySelectorAll('[data-assist-close]').forEach(btn => btn.addEventListener('click', closeAssist));
-
   const welcome = document.querySelector('.welcome-overlay');
   const openWelcome = () => welcome?.classList.add('show');
   const closeWelcome = () => welcome?.classList.remove('show');

@@ -262,3 +262,12 @@ html,body{overflow-x:hidden}
 .image-preview-card{background:var(--bg-surface-low)!important}
 .assist-fab{top:18px!important;right:20px!important}
 @media (max-width:767px){.assist-fab{top:12px!important;right:12px!important}}
+
+/* install guide polish */
+.menu-fab{
+  position:fixed;z-index:55;top:calc(14px + env(safe-area-inset-top));left:14px;width:42px;height:42px;display:inline-flex;align-items:center;justify-content:center;border-radius:999px;border:1px solid color-mix(in srgb, var(--border-color) 38%, transparent);background:color-mix(in srgb, var(--bg-surface) 88%, transparent);backdrop-filter:blur(18px);color:var(--text-main);box-shadow:0 10px 28px rgba(0,0,0,.18)
+}
+@media (min-width:768px){.menu-fab{display:none!important}}
+.install-guide-grid .resource-card{height:100%}
+
+.assist-fab,.assist-panel{display:none!important}
