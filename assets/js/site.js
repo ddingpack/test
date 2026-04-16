@@ -51,7 +51,7 @@
       if (!modal) {
         modal = document.createElement('div');
         modal.className = 'image-preview-modal';
-        modal.innerHTML = `<div class="image-preview-dialog"><div class="image-preview-head"><div><div class="text-[10px] uppercase tracking-[0.25em] text-primary font-bold">Preview</div><div class="font-headline text-2xl font-bold">적용 예시 확대 보기</div></div><button class="image-preview-close" type="button" aria-label="이미지 닫기"><span class="material-symbols-outlined">close</span></button></div><img alt="" /></div>`;
+        modal.innerHTML = `<div class="image-preview-dialog"><div class="image-preview-head"><div><div class="text-[10px] uppercase tracking-[0.25em] text-primary font-bold">Preview</div><div class="font-headline text-2xl font-bold">가이드 이미지 확대 보기</div></div><button class="image-preview-close" type="button" aria-label="이미지 닫기"><span class="material-symbols-outlined">close</span></button></div><div class="image-preview-body"><img alt="" /></div></div>`;
         document.body.appendChild(modal);
         modal.addEventListener('click', (e) => { if (e.target === modal || e.target.closest('.image-preview-close')) modal.classList.remove('show'); });
       }
