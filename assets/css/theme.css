@@ -248,3 +248,17 @@ html.dark body .bg-surface-container-lowest\/40{background-color:rgba(255,255,25
 .allowed-mods-page .ghost-border strong{
   color:var(--text-main)!important;
 }
+
+/* hotfix 20260416 */
+html,body{overflow-x:hidden}
+.site-sidebar{width:18rem!important}
+@media (min-width:768px){main{padding-left:18rem!important}}
+.site-nav{padding:0 1rem!important}
+.nav-item{min-width:0}
+.nav-item>div{min-width:0}
+.nav-item>div>div:first-child,.nav-item>div>div:last-child{word-break:keep-all}
+.preview-frame{padding:1rem;background:var(--bg-surface-low)!important}
+.preview-frame img{max-height:420px;object-fit:contain!important;background:transparent!important}
+.image-preview-card{background:var(--bg-surface-low)!important}
+.assist-fab{top:18px!important;right:20px!important}
+@media (max-width:767px){.assist-fab{top:12px!important;right:12px!important}}
