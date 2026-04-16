@@ -23,8 +23,8 @@ body{min-height:max(884px,100dvh)}
 .step-gradient{background:linear-gradient(135deg,#9fa7ff 0%,#5764f1 100%)}
 </style>
 <link href="assets/css/theme.css" rel="stylesheet"/>
-<title>다운로드 · DDING PACK</title><meta content="띵타이쿤 온라인 유저를 위한 띵팩 공식 배포 허브" name="description"/></head>
-<body class="bg-background text-on-surface font-body selection:bg-primary/30 selection:text-primary">
+<title>특수광물 발광 + 테두리 리소스팩 설치 가이드 · DDING PACK</title><meta content="특수광물 발광 + 테두리 리소스팩 설치 가이드" name="description"/></head>
+<body class="bg-background text-on-surface font-body selection:bg-primary selection:text-on-primary">
 
 <button class="menu-fab md:hidden" data-mobile-menu type="button"><span class="material-symbols-outlined">menu</span></button>
 <button aria-label="보조 정보 열기" class="assist-fab" data-assist-open type="button"><span class="material-symbols-outlined">dashboard_customize</span><span class="assist-fab-label">보조 정보</span></button>
@@ -32,8 +32,8 @@ body{min-height:max(884px,100dvh)}
   <div class="px-5 mb-5 pt-4"><div class="brand-wrap"><div class="brand-mark"><img alt="띵팩 로고" class="brand-mark-img" src="assets/branding/logo-sidebar.png"/></div><div><h2 class="font-headline font-extrabold text-primary text-2xl tracking-tighter uppercase">DDING PACK</h2><p class="text-[10px] text-on-surface-variant tracking-[0.3em] font-medium mt-1 uppercase">Official Hub</p></div></div></div>
   <nav class="site-nav">
     <a class="nav-item" href="index.html"><span class="material-symbols-outlined">home</span><div><div>홈</div><div>배포 허브 개요</div></div></a>
-    <a class="nav-item is-current" href="download.html"><span class="material-symbols-outlined">download</span><div><div>다운로드</div><div>리소스팩과 모드 배포본</div></div></a>
-    <a class="nav-item" href="install-guide.html"><span class="material-symbols-outlined">menu_book</span><div><div>설치 가이드</div><div>자료별 설치 안내</div></div></a>
+    <a class="nav-item" href="download.html"><span class="material-symbols-outlined">download</span><div><div>다운로드</div><div>리소스팩과 모드 배포본</div></div></a>
+    <a class="nav-item is-current" href="install-guide.html"><span class="material-symbols-outlined">menu_book</span><div><div>설치 가이드</div><div>자료별 설치 안내</div></div></a>
     <a class="nav-item" href="allowed-mods.html"><span class="material-symbols-outlined">verified</span><div><div>허용 모드</div><div>화이트리스트와 참고 링크</div></div></a>
     <a class="nav-item is-soon" href="#" onclick="return false;"><span class="material-symbols-outlined">timer</span><div><div>띵팩 타이머</div><div>전용 보조 모드 배포 준비 중</div></div><span class="soon-tag">Coming Soon</span></a>
     <div class="nav-divider"></div>
@@ -66,86 +66,50 @@ body{min-height:max(884px,100dvh)}
   </div>
 </div>
 
-<main class="min-h-screen"><div class="pt-8 pb-20 px-6 md:px-12 max-w-7xl mx-auto">
-<section class="mb-12">
-  <span class="text-xs font-bold tracking-[0.3em] text-primary uppercase block mb-2">Resource Hub</span>
-  <h1 class="text-5xl font-extrabold font-headline tracking-tighter text-on-surface mb-4">배포 자료를 종류별로 구분해 정리했습니다</h1>
-  <p class="text-on-surface-variant text-base leading-relaxed max-w-3xl">리소스팩과 모드를 따로 분리해, 어떤 자료를 받아야 하는지 바로 이해할 수 있도록 구성했습니다. 현재는 리소스팩 2종과, 추후 배포될 띵팩 타이머 모드 구조를 함께 제공합니다.</p>
+<main class="min-h-screen"><div class="pt-8 pb-24 px-6 md:px-12 lg:px-24"><div class="max-w-5xl mx-auto">
+<section class="mb-14">
+<span class="font-label text-primary text-xs font-bold uppercase tracking-[0.25em] mb-4 block">Documentation</span>
+<h1 class="font-headline text-5xl md:text-7xl font-black tracking-tighter text-on-surface mb-6">특수광물 발광 + 테두리 리소스팩 설치 가이드</h1>
+<p class="text-on-surface-variant text-base md:text-lg max-w-3xl leading-relaxed">기존 설치 가이드 내용을 기준으로, 리소스팩 설치 순서와 필수 모드, 적용 순서, 적용 예시, 자주 생기는 문제를 더 명확하게 정리했습니다.</p>
 </section>
 
-<section class="mb-14">
-  <div class="flex items-end justify-between gap-6 mb-6 flex-wrap">
+<section class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-14">
+  <div class="doc-card"><div class="text-[10px] tracking-[0.25em] uppercase text-primary font-bold mb-3">Step 1</div><h2 class="font-headline text-2xl font-bold mb-3">필수 모드 확인</h2><p class="text-sm text-on-surface-variant leading-relaxed">Server Pack Unlocker 사용이 필요합니다. Continuity 사용이 가능해야 하며, 빛나는 텍스처 옵션이 켜져 있어야 발광 표현이 정상적으로 보입니다.</p></div>
+  <div class="doc-card"><div class="text-[10px] tracking-[0.25em] uppercase text-primary font-bold mb-3">Step 2</div><h2 class="font-headline text-2xl font-bold mb-3">리소스팩 적용 순서</h2><p class="text-sm text-on-surface-variant leading-relaxed">특수광물 발광 + 테두리 리소스팩을 띵타이쿤 온라인 공식 리소스팩보다 위에 배치해야 정상 적용됩니다.</p></div>
+</section>
+
+<section class="doc-card mb-14">
+  <div class="flex items-center justify-between gap-4 mb-6 flex-wrap">
     <div>
-      <span class="text-[10px] tracking-[0.25em] uppercase text-primary font-bold mb-2 block">Resources</span>
-      <h2 class="font-headline text-3xl font-bold">리소스팩</h2>
-      <p class="text-sm text-on-surface-variant mt-2 leading-relaxed">서버에서 사용하는 특수광물 리소스팩 배포본입니다.</p>
+      <div class="text-[10px] tracking-[0.25em] uppercase text-primary font-bold mb-2">Preview</div>
+      <h2 class="font-headline text-3xl font-bold">적용 예시</h2>
     </div>
+    <div class="text-sm text-on-surface-variant">이미지를 클릭하면 더 크게 볼 수 있습니다.</div>
   </div>
-  <div class="grid grid-cols-1 xl:grid-cols-2 gap-6">
-    <article class="resource-card">
-      <div class="flex items-start justify-between gap-4 mb-5">
-        <div>
-          <span class="meta-badge meta-primary">Primary</span>
-          <h3 class="font-headline text-2xl font-bold mt-4">특수광물 발광 + 테두리 리소스팩</h3>
-          <p class="text-sm text-on-surface-variant leading-relaxed mt-3">가장 먼저 받는 기본 배포본입니다. 특수광물의 발광 효과와 테두리를 함께 표시하는 기본 리소스팩입니다.</p>
-        </div>
-      </div>
-      <div class="flex items-center justify-between gap-4 flex-wrap pt-4 border-t border-outline-variant/10">
-        <div class="text-xs text-on-surface-variant uppercase tracking-[0.24em] font-bold">기본 배포본</div>
-        <a class="px-5 py-3 rounded-md bg-primary text-on-primary font-bold inline-flex items-center gap-2" href="https://drive.google.com/uc?export=download&id=1o4vbMMH-lrfdb5uNVW2ilDM_4YgNHrlg" rel="noopener" target="_blank"><span class="material-symbols-outlined text-sm">download</span>다운로드</a>
-      </div>
-    </article>
-    <article class="resource-card">
-      <div class="flex items-start justify-between gap-4 mb-5">
-        <div>
-          <span class="meta-badge meta-optional">Optional</span>
-          <h3 class="font-headline text-2xl font-bold mt-4">띵타이쿤 특수광물 테두리 베타 리소스팩</h3>
-          <p class="text-sm text-on-surface-variant leading-relaxed mt-3">특수광물의 테두리만 표시되는 베타 리소스팩입니다. 발광 테두리 리소스팩을 사용하지 못하는 사용자를 위한 대체 버전입니다.</p>
-        </div>
-      </div>
-      <div class="flex items-center justify-between gap-4 flex-wrap pt-4 border-t border-outline-variant/10">
-        <div class="text-xs text-on-surface-variant uppercase tracking-[0.24em] font-bold">대체 배포본</div>
-        <a class="px-5 py-3 rounded-md bg-primary text-on-primary font-bold inline-flex items-center gap-2" href="https://drive.google.com/uc?export=download&id=1fEy0s3P07qzd2UfchVwLpyM7oOVYIN-Z" rel="noopener" target="_blank"><span class="material-symbols-outlined text-sm">download</span>다운로드</a>
-      </div>
-    </article>
+  <div class="preview-frame image-preview-card" data-preview-image="image.png" data-preview-alt="특수광물 리소스팩 적용 예시">
+    <img src="image.png" alt="특수광물 리소스팩 적용 예시"/>
   </div>
 </section>
 
-<section class="mb-14">
-  <div class="flex items-end justify-between gap-6 mb-6 flex-wrap">
-    <div>
-      <span class="text-[10px] tracking-[0.25em] uppercase text-primary font-bold mb-2 block">Modules</span>
-      <h2 class="font-headline text-3xl font-bold">모드</h2>
-      <p class="text-sm text-on-surface-variant mt-2 leading-relaxed">리소스팩과 별도로 동작하는 띵팩 전용 보조 모드 배포 영역입니다.</p>
-    </div>
-  </div>
-  <div class="grid grid-cols-1 xl:grid-cols-2 gap-6">
-    <article class="resource-card">
-      <div class="flex items-start justify-between gap-4 mb-5">
-        <div>
-          <span class="meta-badge meta-soon">Coming Soon</span>
-          <h3 class="font-headline text-2xl font-bold mt-4">띵팩 타이머</h3>
-          <p class="text-sm text-on-surface-variant leading-relaxed mt-3">띵팩 전용 보조 모드입니다. 현재 배포 준비 중이며, 추후 실제 배포 링크가 연결되면 같은 위치에서 바로 다운로드할 수 있도록 구조를 먼저 준비했습니다.</p>
-        </div>
-      </div>
-      <div class="flex items-center justify-between gap-4 flex-wrap pt-4 border-t border-outline-variant/10">
-        <div class="text-xs text-on-surface-variant uppercase tracking-[0.24em] font-bold">모드 배포 준비 중</div>
-        <button class="px-5 py-3 rounded-md border border-outline-variant/20 text-on-surface-variant font-bold inline-flex items-center gap-2 opacity-70 cursor-not-allowed" type="button" disabled><span class="material-symbols-outlined text-sm">schedule</span>준비 중</button>
-      </div>
-    </article>
-  </div>
+<section class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-14">
+  <div class="doc-card"><h3 class="font-headline text-xl font-bold mb-3">설치 순서</h3><ul class="space-y-3 text-sm text-on-surface-variant leading-relaxed"><li>1. Server Pack Unlocker 설치</li><li>2. 특수광물 리소스팩 추가</li><li>3. 공식 리소스팩보다 위에 배치</li><li>4. Continuity 설정 확인</li></ul></div>
+  <div class="doc-card"><h3 class="font-headline text-xl font-bold mb-3">필수 모드</h3><ul class="space-y-3 text-sm text-on-surface-variant leading-relaxed"><li>Server Pack Unlocker</li><li>Continuity</li><li>빛나는 텍스처 옵션 켜짐</li></ul></div>
+  <div class="doc-card"><h3 class="font-headline text-xl font-bold mb-3">자주 생기는 문제</h3><ul class="space-y-3 text-sm text-on-surface-variant leading-relaxed"><li>적용이 안 되면 리소스팩 우선순서를 먼저 확인하세요.</li><li>발광이 안 보이면 Continuity와 설정을 점검하세요.</li><li>공식 리소스팩 위에 위치해야 정상 적용됩니다.</li></ul></div>
 </section>
 
 <section class="doc-card">
   <div class="flex items-start justify-between gap-6 flex-wrap">
     <div>
-      <span class="text-[10px] tracking-[0.25em] uppercase text-primary font-bold mb-2 block">Guide Flow</span>
-      <h2 class="font-headline text-3xl font-bold mb-3">설치 가이드는 자료 종류별로 분리했습니다</h2>
-      <p class="text-sm text-on-surface-variant leading-relaxed max-w-3xl">리소스팩 설치 가이드와 띵팩 타이머 설치 가이드를 분리해, 어떤 자료를 설치하려는지 먼저 선택할 수 있도록 구조를 정리했습니다.</p>
+      <div class="text-[10px] tracking-[0.25em] uppercase text-primary font-bold mb-2">Next</div>
+      <h2 class="font-headline text-3xl font-bold mb-3">자료 확인 흐름</h2>
+      <p class="text-sm text-on-surface-variant leading-relaxed max-w-3xl">설치 전에는 다운로드 페이지에서 기본 배포본과 대체용 베타 배포본의 차이를 먼저 확인하고, 설치 후에는 허용 모드 페이지에서 사용 가능한 모드 목록을 다시 점검해 주세요.</p>
     </div>
-    <a class="px-5 py-3 rounded-md border border-outline-variant/20 text-primary font-bold inline-flex items-center gap-2" href="install-guide.html"><span class="material-symbols-outlined text-sm">menu_book</span>설치 가이드 보기</a>
+    <div class="flex gap-3 flex-wrap">
+      <a class="px-5 py-3 rounded-md border border-outline-variant/20 text-primary font-bold inline-flex items-center gap-2" href="download.html"><span class="material-symbols-outlined text-sm">download</span>다운로드 보기</a>
+      <a class="px-5 py-3 rounded-md border border-outline-variant/20 text-primary font-bold inline-flex items-center gap-2" href="allowed-mods.html"><span class="material-symbols-outlined text-sm">verified</span>허용 모드 보기</a>
+    </div>
   </div>
 </section>
-</div></main>
+</div></div></main>
 <script src="assets/js/site.js"></script>
 </body></html>

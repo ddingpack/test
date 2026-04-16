@@ -1,8 +1,6 @@
 
 (() => {
   const root = document.documentElement;
-  const saved = localStorage.getItem('ddingpack-theme') || 'dark';
-  root.classList.toggle('dark', saved === 'dark');
   const syncTheme = () => {
     const dark = root.classList.contains('dark');
     localStorage.setItem('ddingpack-theme', dark ? 'dark' : 'light');
@@ -10,6 +8,9 @@
     document.querySelectorAll('[data-theme-label]').forEach(el => el.textContent = dark ? '다크 모드' : '라이트 모드');
     document.querySelectorAll('[data-theme-toggle]').forEach(el => el.setAttribute('aria-label', dark ? '다크 모드' : '라이트 모드'));
   };
+  const savedTheme = localStorage.getItem('ddingpack-theme');
+  if (savedTheme === 'light') root.classList.remove('dark');
+  else root.classList.add('dark');
   syncTheme();
   document.querySelectorAll('[data-theme-toggle]').forEach(btn => btn.addEventListener('click', () => {
     root.classList.toggle('dark');
@@ -23,8 +24,8 @@
   document.querySelectorAll('[data-mobile-close]').forEach(btn => btn.addEventListener('click', closeDrawer));
 
   const assist = document.querySelector('[data-assist]');
-  const openAssist = () => assist?.classList.remove('hidden');
-  const closeAssist = () => assist?.classList.add('hidden');
+  const openAssist = () => assist?.classList.add('show');
+  const closeAssist = () => assist?.classList.remove('show');
   document.querySelectorAll('[data-assist-open]').forEach(btn => btn.addEventListener('click', openAssist));
   document.querySelectorAll('[data-assist-close]').forEach(btn => btn.addEventListener('click', closeAssist));
 
@@ -42,12 +43,8 @@
       e.preventDefault();
       openWelcome();
     }));
-    welcome.addEventListener('click', (e) => {
-      if (e.target === welcome) closeWelcome();
-    });
+    welcome.addEventListener('click', (e) => { if (e.target === welcome) closeWelcome(); });
   }
-
-  document.querySelectorAll('.toast-close').forEach(btn => btn.addEventListener('click', ()=> btn.closest('.toast-area')?.remove()));
 
   document.querySelectorAll('[data-preview-image]').forEach(trigger => {
     trigger.addEventListener('click', () => {
@@ -57,7 +54,7 @@
       if (!modal) {
         modal = document.createElement('div');
         modal.className = 'image-preview-modal';
-        modal.innerHTML = `<div class="image-preview-dialog"><div class="image-preview-head"><div><div class="text-[10px] uppercase tracking-[0.25em] text-primary font-bold">Preview</div><div class="font-headline text-2xl font-bold">적용 예시 확대 보기</div></div><button class="image-preview-close" type="button" aria-label="이미지 닫기"><span class="material-symbols-outlined">close</span></button></div><img alt="" /></div>`;
+        modal.innerHTML = `<div class="image-preview-dialog"><div class="image-preview-head"><div><div class="text-[10px] uppercase tracking-[0.25em] text-primary font-bold">Preview</div><div class="font-headline text-2xl font-bold">적용 예시 확대 보기</div></div><button class="image-preview-close" type="button" aria-label="이미지 닫기"><span class="material-symbols-outlined">close</span></button></div><div class="image-preview-body"><img alt=""></div></div>`;
         document.body.appendChild(modal);
         modal.addEventListener('click', (e) => { if (e.target === modal || e.target.closest('.image-preview-close')) modal.classList.remove('show'); });
       }
