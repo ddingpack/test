@@ -1,196 +1,153 @@
 <!DOCTYPE html>
-<html lang="ko">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>띵팩 타이머 설치 가이드 - DDING PACK</title>
-  <meta name="description" content="띵타이쿤 온라인 특수광물 리소스팩 설치 가이드. Fabric API, Continuity, Server Pack Unlocker 기준의 설치 흐름 안내" />
-  <meta name="theme-color" content="#071019" />
-  <link rel="stylesheet" href="assets/css/style.css" />
-</head>
-<body data-page="install-guide">
-  <div class="site-bg" aria-hidden="true">
-    <div class="site-orb orb-a"></div>
-    <div class="site-orb orb-b"></div>
-    <div class="site-orb orb-c"></div>
+<html class="dark" lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<meta content="#0c0e13" name="theme-color"/>
+<link href="assets/branding/favicon-32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="assets/branding/apple-touch-icon.png" rel="apple-touch-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Manrope:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+  tailwind.config = {
+    darkMode: 'class',
+    theme: { extend: {
+      colors: {
+        "on-primary-container": "#00087d","on-surface-variant": "#aaabb1","on-surface": "#f0f0f7","tertiary-fixed-dim": "#87f09f",
+        "surface": "#0c0e13","on-secondary-fixed-variant": "#585c63","secondary": "#dfe2eb","primary-fixed": "#8e98ff",
+        "secondary-dim": "#d1d4dd","secondary-fixed-dim": "#d1d4dd","error": "#ff6e84","surface-container": "#171a1f",
+        "primary": "#9fa7ff","on-primary-fixed-variant": "#000b98","surface-bright": "#292c33","outline-variant": "#46484d",
+        "on-tertiary-container": "#00632e","secondary-fixed": "#dfe2eb","surface-container-low": "#111318","on-tertiary-fixed-variant": "#006e34",
+        "on-secondary-container": "#cdd0d9","tertiary": "#deffdf","error-dim": "#d73357","outline": "#74757b",
+        "surface-dim": "#0c0e13","surface-container-highest": "#23262c","inverse-primary": "#404dda","surface-container-high": "#1d2026",
+        "tertiary-fixed": "#95ffac","on-tertiary": "#006c33","background": "#0c0e13","error-container": "#a70138",
+        "on-error-container": "#ffb2b9","tertiary-dim": "#87f09f","on-error": "#490013","surface-variant": "#23262c",
+        "surface-tint": "#9fa7ff","on-tertiary-fixed": "#004e23","on-secondary-fixed": "#3b3f46","primary-container": "#8e98ff",
+        "inverse-on-surface": "#53555a","on-primary-fixed": "#000000","primary-fixed-dim": "#7d88ff","tertiary-container": "#95ffac",
+        "on-primary": "#000c9f","on-secondary": "#4e5259","secondary-container": "#43474e","primary-dim": "#5764f1",
+        "inverse-surface": "#f9f9ff","surface-container-lowest": "#000000","on-background": "#f0f0f7"
+      },
+      borderRadius: { DEFAULT: '0.125rem', lg: '0.25rem', xl: '0.5rem', full: '0.75rem' },
+      fontFamily: { headline: ['Manrope'], body: ['Inter'], label: ['Inter'] }
+    }}
+  }
+</script>
+<style>
+.material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;vertical-align:middle}
+body{min-height:max(884px,100dvh)}
+.glass-panel{background:rgba(23,26,31,.6);backdrop-filter:blur(20px)}
+.ghost-border{border:1px solid rgba(70,72,77,.15)}
+.step-gradient{background:linear-gradient(135deg,#9fa7ff 0%,#5764f1 100%)}
+</style>
+<link href="assets/css/theme.css" rel="stylesheet"/>
+<title>다운로드 · DDING PACK</title><meta content="띵타이쿤 온라인 유저를 위한 띵팩 공식 배포 허브" name="description"/></head><body class="bg-background text-on-surface font-body selection:bg-primary/30 selection:text-primary"><aside class="site-sidebar hidden md:flex h-full w-72 fixed left-0 top-0 border-r border-outline-variant/15 bg-surface-container-low z-[60] flex-col gap-2 overflow-y-auto py-5">
+<div class="px-5 mb-5 pt-4"><div class="brand-wrap"><div class="brand-mark"><img alt="띵팩 로고" class="brand-mark-img" src="assets/branding/logo-sidebar.png"/></div><div><h2 class="font-headline font-extrabold text-primary text-2xl tracking-tighter uppercase">DDING PACK</h2><p class="text-[10px] text-on-surface-variant tracking-[0.3em] font-medium mt-1 uppercase">Official Hub</p></div></div></div>
+<nav class="site-nav"><a class="nav-item" href="index.html"><span class="material-symbols-outlined">home</span><div class="flex-1 min-w-0"><div class="font-medium text-sm tracking-wide">홈</div><div class="text-[11px] text-on-surface-variant leading-relaxed">배포 허브 개요</div></div></a><a class="nav-item" href="download.html"><span class="material-symbols-outlined">download</span><div class="flex-1 min-w-0"><div class="font-medium text-sm tracking-wide">다운로드</div><div class="text-[11px] text-on-surface-variant leading-relaxed">배포 파일 확인</div></div></a><a class="nav-item is-current" href="install-guide.html"><span class="material-symbols-outlined">menu_book</span><div class="flex-1 min-w-0"><div class="font-medium text-sm tracking-wide">설치 가이드</div><div class="text-[11px] text-on-surface-variant leading-relaxed">자료별 설치 안내</div></div></a><a class="nav-item" href="allowed-mods.html"><span class="material-symbols-outlined">extension</span><div class="flex-1 min-w-0"><div class="font-medium text-sm tracking-wide">허용 모드</div><div class="text-[11px] text-on-surface-variant leading-relaxed">화이트리스트와 참고 링크</div></div></a><a class="nav-item" href="notice.html"><span class="material-symbols-outlined">campaign</span><div class="flex-1 min-w-0"><div class="font-medium text-sm tracking-wide">공지 / 업데이트</div><div class="text-[11px] text-on-surface-variant leading-relaxed">운영 공지와 변경점</div></div></a><a class="nav-item" href="faq.html"><span class="material-symbols-outlined">quiz</span><div class="flex-1 min-w-0"><div class="font-medium text-sm tracking-wide">FAQ</div><div class="text-[11px] text-on-surface-variant leading-relaxed">문제 해결과 자주 묻는 질문</div></div></a><div class="nav-divider"></div><div class="nav-section-label"><div class="text-[10px] uppercase tracking-[0.25em] text-on-surface-variant font-bold">Coming Soon</div></div><div class="nav-item is-soon"><span class="material-symbols-outlined text-on-surface-variant">diamond</span><div class="flex-1 min-w-0"><div class="flex items-center gap-2"><span class="font-medium text-sm tracking-wide text-on-secondary-container">채광 전문가</span><span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container text-[10px] font-bold tracking-widest uppercase">Soon</span></div><div class="text-[11px] text-on-surface-variant leading-relaxed">광물 특화 허브 준비 중</div></div></div><div class="nav-item is-soon"><span class="material-symbols-outlined text-on-surface-variant">potted_plant</span><div class="flex-1 min-w-0"><div class="flex items-center gap-2"><span class="font-medium text-sm tracking-wide text-on-secondary-container">재배 전문가</span><span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container text-[10px] font-bold tracking-widest uppercase">Soon</span></div><div class="text-[11px] text-on-surface-variant leading-relaxed">작물 특화 허브 준비 중</div></div></div><div class="nav-item is-soon"><span class="material-symbols-outlined text-on-surface-variant">sports_martial_arts</span><div class="flex-1 min-w-0"><div class="flex items-center gap-2"><span class="font-medium text-sm tracking-wide text-on-secondary-container">사냥 전문가</span><span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container text-[10px] font-bold tracking-widest uppercase">Soon</span></div><div class="text-[11px] text-on-surface-variant leading-relaxed">전투 특화 허브 준비 중</div></div></div><div class="nav-item is-soon"><span class="material-symbols-outlined text-on-surface-variant">sailing</span><div class="flex-1 min-w-0"><div class="flex items-center gap-2"><span class="font-medium text-sm tracking-wide text-on-secondary-container">해양 전문가</span><span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container text-[10px] font-bold tracking-widest uppercase">Soon</span></div><div class="text-[11px] text-on-surface-variant leading-relaxed">해양 특화 허브 준비 중</div></div></div><div class="nav-divider"></div><a class="nav-item is-policy" href="privacy.html"><span class="material-symbols-outlined">policy</span><div class="flex-1 min-w-0"><div class="font-medium text-sm tracking-wide">개인정보처리방침</div><div class="text-[11px] text-on-surface-variant leading-relaxed">이용 기준과 안내</div></div></a><a class="nav-item is-policy" href="terms.html"><span class="material-symbols-outlined">gavel</span><div class="flex-1 min-w-0"><div class="font-medium text-sm tracking-wide">이용약관</div><div class="text-[11px] text-on-surface-variant leading-relaxed">운영 원칙과 고지</div></div></a><div class="nav-utilities"><button class="nav-item utility-item" data-reopen-welcome=""><span class="material-symbols-outlined">replay</span><div><div class="font-medium text-sm tracking-wide">웰컴 화면 다시 보기</div><div class="text-[11px] text-on-surface-variant">첫 진입 레이어 다시 열기</div></div></button><button class="nav-item utility-item" data-theme-toggle=""><span class="material-symbols-outlined" data-theme-icon="">dark_mode</span><div><div class="font-medium text-sm tracking-wide" data-theme-label="">다크 모드</div><div class="text-[11px] text-on-surface-variant">라이트/다크 전환</div></div></button></div></nav></aside><button class="menu-fab md:hidden" data-mobile-menu="" type="button"><span class="material-symbols-outlined">menu</span></button><aside class="site-sidebar hidden md:flex h-full w-72 fixed left-0 top-0 border-r border-outline-variant/15 bg-surface-container-low z-[60] flex-col gap-2 overflow-y-auto py-5">
+<div class="px-5 mb-5 pt-4"><div class="brand-wrap"><div class="brand-mark"><img alt="띵팩 로고" class="brand-mark-img" src="assets/branding/logo-sidebar.png"/></div><div><h2 class="font-headline font-extrabold text-primary text-2xl tracking-tighter uppercase">DDING PACK</h2><p class="text-[10px] text-on-surface-variant tracking-[0.3em] font-medium mt-1 uppercase">Official Hub</p></div></div></div>
+<nav class="site-nav"><a class="nav-item" href="index.html"><span class="material-symbols-outlined">home</span><div class="flex-1 min-w-0"><div class="font-medium text-sm tracking-wide">홈</div><div class="text-[11px] text-on-surface-variant leading-relaxed">배포 허브 개요</div></div></a><a class="nav-item" href="download.html"><span class="material-symbols-outlined">download</span><div class="flex-1 min-w-0"><div class="font-medium text-sm tracking-wide">다운로드</div><div class="text-[11px] text-on-surface-variant leading-relaxed">배포 파일 확인</div></div></a><a class="nav-item" href="install-guide.html"><span class="material-symbols-outlined">menu_book</span><div class="flex-1 min-w-0"><div class="font-medium text-sm tracking-wide">설치 가이드</div><div class="text-[11px] text-on-surface-variant leading-relaxed">자료별 설치 안내</div></div></a><a class="nav-item" href="allowed-mods.html"><span class="material-symbols-outlined">extension</span><div class="flex-1 min-w-0"><div class="font-medium text-sm tracking-wide">허용 모드</div><div class="text-[11px] text-on-surface-variant leading-relaxed">화이트리스트와 참고 링크</div></div></a><a class="nav-item" href="notice.html"><span class="material-symbols-outlined">campaign</span><div class="flex-1 min-w-0"><div class="font-medium text-sm tracking-wide">공지 / 업데이트</div><div class="text-[11px] text-on-surface-variant leading-relaxed">운영 공지와 변경점</div></div></a><a class="nav-item" href="faq.html"><span class="material-symbols-outlined">quiz</span><div class="flex-1 min-w-0"><div class="font-medium text-sm tracking-wide">FAQ</div><div class="text-[11px] text-on-surface-variant leading-relaxed">문제 해결과 자주 묻는 질문</div></div></a><div class="nav-divider"></div><div class="nav-section-label"><div class="text-[10px] uppercase tracking-[0.25em] text-on-surface-variant font-bold">Coming Soon</div></div><div class="nav-item is-soon"><span class="material-symbols-outlined text-on-surface-variant">diamond</span><div class="flex-1 min-w-0"><div class="flex items-center gap-2"><span class="font-medium text-sm tracking-wide text-on-secondary-container">채광 전문가</span><span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container text-[10px] font-bold tracking-widest uppercase">Soon</span></div><div class="text-[11px] text-on-surface-variant leading-relaxed">광물 특화 허브 준비 중</div></div></div><div class="nav-item is-soon"><span class="material-symbols-outlined text-on-surface-variant">potted_plant</span><div class="flex-1 min-w-0"><div class="flex items-center gap-2"><span class="font-medium text-sm tracking-wide text-on-secondary-container">재배 전문가</span><span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container text-[10px] font-bold tracking-widest uppercase">Soon</span></div><div class="text-[11px] text-on-surface-variant leading-relaxed">작물 특화 허브 준비 중</div></div></div><div class="nav-item is-soon"><span class="material-symbols-outlined text-on-surface-variant">sports_martial_arts</span><div class="flex-1 min-w-0"><div class="flex items-center gap-2"><span class="font-medium text-sm tracking-wide text-on-secondary-container">사냥 전문가</span><span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container text-[10px] font-bold tracking-widest uppercase">Soon</span></div><div class="text-[11px] text-on-surface-variant leading-relaxed">전투 특화 허브 준비 중</div></div></div><div class="nav-item is-soon"><span class="material-symbols-outlined text-on-surface-variant">sailing</span><div class="flex-1 min-w-0"><div class="flex items-center gap-2"><span class="font-medium text-sm tracking-wide text-on-secondary-container">해양 전문가</span><span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container text-[10px] font-bold tracking-widest uppercase">Soon</span></div><div class="text-[11px] text-on-surface-variant leading-relaxed">해양 특화 허브 준비 중</div></div></div><div class="nav-divider"></div><a class="nav-item is-policy" href="privacy.html"><span class="material-symbols-outlined">policy</span><div class="flex-1 min-w-0"><div class="font-medium text-sm tracking-wide">개인정보처리방침</div><div class="text-[11px] text-on-surface-variant leading-relaxed">이용 기준과 안내</div></div></a><a class="nav-item is-policy" href="terms.html"><span class="material-symbols-outlined">gavel</span><div class="flex-1 min-w-0"><div class="font-medium text-sm tracking-wide">이용약관</div><div class="text-[11px] text-on-surface-variant leading-relaxed">운영 원칙과 고지</div></div></a><div class="nav-utilities"><button class="nav-item utility-item" data-reopen-welcome=""><span class="material-symbols-outlined">replay</span><div><div class="font-medium text-sm tracking-wide">웰컴 화면 다시 보기</div><div class="text-[11px] text-on-surface-variant">첫 진입 레이어 다시 열기</div></div></button><button class="nav-item utility-item" data-theme-toggle=""><span class="material-symbols-outlined" data-theme-icon="">dark_mode</span><div><div class="font-medium text-sm tracking-wide" data-theme-label="">다크 모드</div><div class="text-[11px] text-on-surface-variant">라이트/다크 전환</div></div></button></div></nav></aside>
+<div class="mobile-drawer fixed inset-0 z-[70] hidden" data-mobile-drawer=""><div class="absolute inset-0 bg-black/50" data-mobile-close=""></div><div class="absolute inset-y-0 left-0 w-[min(88vw,320px)] bg-surface-container-low border-r border-outline-variant/15 p-6 overflow-y-auto"><div class="flex items-center justify-between pt-4 mb-8"><div class="flex items-center gap-3"><img alt="" class="w-10 h-10 rounded-lg" src="assets/branding/logo-slot.png"/><div><div class="font-headline font-extrabold tracking-tighter text-primary uppercase">DDING PACK</div><div class="text-[10px] uppercase tracking-[0.25em] text-on-surface-variant">Official Hub</div></div></div><button class="text-on-surface" data-mobile-close=""><span class="material-symbols-outlined">close</span></button></div><nav class="flex flex-col gap-2"><a class="flex items-center gap-3 px-4 py-3 bg-primary/10 text-primary border-l-4 border-primary font-bold translate-x-1 duration-200" href="index.html"><span class="material-symbols-outlined">home</span><div class="flex-1 min-w-0"><div class="font-medium text-sm tracking-wide">홈</div><div class="text-[11px] text-on-surface-variant leading-relaxed">배포 허브 개요</div></div></a><a class="flex items-center gap-3 px-4 py-3 text-on-secondary-container opacity-70 hover:bg-surface-container hover:opacity-100 transition-all group" href="download.html"><span class="material-symbols-outlined">download</span><div class="flex-1 min-w-0"><div class="font-medium text-sm tracking-wide">다운로드</div><div class="text-[11px] text-on-surface-variant leading-relaxed">배포 파일 확인</div></div></a><a class="flex items-center gap-3 px-4 py-3 text-on-secondary-container opacity-70 hover:bg-surface-container hover:opacity-100 transition-all group" href="install-guide.html"><span class="material-symbols-outlined">menu_book</span><div class="flex-1 min-w-0"><div class="font-medium text-sm tracking-wide">설치 가이드</div><div class="text-[11px] text-on-surface-variant leading-relaxed">자료별 설치 안내</div></div></a><a class="flex items-center gap-3 px-4 py-3 text-on-secondary-container opacity-70 hover:bg-surface-container hover:opacity-100 transition-all group" href="allowed-mods.html"><span class="material-symbols-outlined">extension</span><div class="flex-1 min-w-0"><div class="font-medium text-sm tracking-wide">허용 모드</div><div class="text-[11px] text-on-surface-variant leading-relaxed">화이트리스트와 참고 링크</div></div></a><a class="flex items-center gap-3 px-4 py-3 text-on-secondary-container opacity-70 hover:bg-surface-container hover:opacity-100 transition-all group" href="notice.html"><span class="material-symbols-outlined">campaign</span><div class="flex-1 min-w-0"><div class="font-medium text-sm tracking-wide">공지 / 업데이트</div><div class="text-[11px] text-on-surface-variant leading-relaxed">운영 공지와 변경점</div></div></a><a class="flex items-center gap-3 px-4 py-3 text-on-secondary-container opacity-70 hover:bg-surface-container hover:opacity-100 transition-all group" href="faq.html"><span class="material-symbols-outlined">quiz</span><div class="flex-1 min-w-0"><div class="font-medium text-sm tracking-wide">FAQ</div><div class="text-[11px] text-on-surface-variant leading-relaxed">문제 해결과 자주 묻는 질문</div></div></a><a class="flex items-center gap-3 px-4 py-3 text-on-secondary-container opacity-70 hover:bg-surface-container hover:opacity-100 transition-all group" href="privacy.html"><span class="material-symbols-outlined">policy</span><div class="flex-1 min-w-0"><div class="font-medium text-sm tracking-wide">개인정보처리방침</div><div class="text-[11px] text-on-surface-variant leading-relaxed">이용 기준과 안내</div></div></a><a class="flex items-center gap-3 px-4 py-3 text-on-secondary-container opacity-70 hover:bg-surface-container hover:opacity-100 transition-all group" href="terms.html"><span class="material-symbols-outlined">gavel</span><div class="flex-1 min-w-0"><div class="font-medium text-sm tracking-wide">이용약관</div><div class="text-[11px] text-on-surface-variant leading-relaxed">운영 원칙과 고지</div></div></a></nav></div></div>
+
+
+<main class="min-h-screen"><div class="pt-8 pb-20 px-6 md:px-12 max-w-6xl mx-auto">
+<section class="mb-12">
+  <span class="text-xs font-bold tracking-[0.3em] text-primary uppercase block mb-2">Client Mod Guide</span>
+  <h1 class="text-5xl font-extrabold font-headline tracking-tighter text-on-surface mb-4">띵팩 타이머 설치 가이드</h1>
+  <p class="text-on-surface-variant text-base leading-relaxed max-w-3xl">띵팩 타이머는 띵타이쿤 온라인에서 곡나가와 광석 골렘 쿨타임을 더 편하게 확인할 수 있도록 도와주는 클라이언트 전용 모드입니다.</p>
+</section>
+
+<section class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-14">
+  <div class="doc-card">
+    <div class="text-[10px] tracking-[0.25em] uppercase text-primary font-bold mb-3">준비 단계</div>
+    <h2 class="font-headline text-2xl font-bold mb-3">1. 사용 전 준비</h2>
+    <ul class="space-y-3 text-sm text-on-surface-variant leading-relaxed">
+      <li>• Fabric 1.21.4 환경에서 사용해 주세요.</li>
+      <li>• 다운로드한 모드 JAR 파일을 <code class="text-on-surface">.minecraft/mods</code> 폴더에 넣어 주세요.</li>
+      <li>• 게임 실행 후 조작키 설정에서 <strong class="text-on-surface">띵팩 타이머 설정 열기</strong> 키를 확인할 수 있습니다.</li>
+    </ul>
   </div>
 
-  <header class="site-header">
-    <div class="header-shell">
-      <a class="brand" href="index.html" aria-label="DDING PACK 홈으로 이동">
-        <span class="brand-mark" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none">
-            <path d="M5 8.5 12 4l7 4.5v7L12 20l-7-4.5v-7Z" stroke="currentColor" stroke-width="1.8"/>
-            <path d="M12 4v16M5 8.5l7 4 7-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-          </svg>
-        </span>
-        <span class="brand-copy">
-          <span class="brand-title">DDING PACK</span>
-          <span class="brand-subtitle">Minecraft Resource Archive</span>
-        </span>
-      </a>
+  <div class="doc-card">
+    <div class="text-[10px] tracking-[0.25em] uppercase text-primary font-bold mb-3">설정창</div>
+    <h2 class="font-headline text-2xl font-bold mb-3">2. 설정창 열기</h2>
+    <p class="text-sm text-on-surface-variant leading-relaxed mb-4">설정한 키를 누르면 <strong class="text-on-surface">띵팩 타이머</strong> 설정창이 열립니다.</p>
+    <ul class="space-y-2 text-sm text-on-surface-variant leading-relaxed">
+      <li>• 곡나가 레벨</li>
+      <li>• HUD 표시</li>
+      <li>• 광석 골렘 쿨타임 표시</li>
+      <li>• 쿨타임 종료 시 표시</li>
+      <li>• HUD 위치 편집</li>
+      <li>• 타이머 초기화</li>
+    </ul>
+  </div>
 
-      <div class="header-right">
-        <nav class="site-nav" aria-label="주요 메뉴">
-          <a href="index.html" data-nav-link>Home</a>
-          <a href="notice.html" data-nav-link>공지사항</a>
-          <a href="download.html" data-nav-link>자료실</a>
-          <a href="install-guide.html" data-nav-link>설치 가이드</a>
-          <a href="allowed-mods.html" data-nav-link>허용 모드</a>
-        </nav>
+  <div class="doc-card">
+    <div class="text-[10px] tracking-[0.25em] uppercase text-primary font-bold mb-3">제작자</div>
+    <h2 class="font-headline text-2xl font-bold mb-3">미아</h2>
+    <p class="text-sm text-on-surface-variant leading-relaxed">띵팩 타이머 모드 제작자 표기입니다. 이후 배포 버전과 함께 추가 안내가 이어질 수 있습니다.</p>
+  </div>
+</section>
 
-        <div class="toolbar-group">
-          <div class="theme-switch" aria-label="테마 전환">
-            <button type="button" class="theme-toggle" data-theme-value="light" aria-pressed="false">LIGHT</button>
-            <button type="button" class="theme-toggle" data-theme-value="dark" aria-pressed="false">DARK</button>
-          </div>
-
-          <button
-            class="menu-toggle"
-            type="button"
-            data-menu-toggle
-            aria-expanded="false"
-            aria-controls="mobile-menu"
-            aria-label="메뉴 열기"
-          >
-            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path d="M5 7h14M5 12h14M5 17h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-            </svg>
-          </button>
-        </div>
+<section class="grid grid-cols-1 xl:grid-cols-2 gap-6 mb-14">
+  <article class="resource-card">
+    <div class="text-[10px] tracking-[0.25em] uppercase text-primary font-bold mb-3">HUD 편집</div>
+    <h2 class="font-headline text-3xl font-bold mb-3">3. HUD 위치 및 크기 조절</h2>
+    <p class="text-sm text-on-surface-variant leading-relaxed mb-5">HUD 위치 편집을 누르면 HUD 편집 화면으로 들어갑니다. 편집 화면에서는 마우스로 HUD를 직접 드래그해서 위치를 옮길 수 있습니다.</p>
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+      <div class="doc-card !p-4">
+        <strong class="block text-on-surface mb-2">완료</strong>
+        <span class="text-sm text-on-surface-variant leading-relaxed">편집 종료</span>
       </div>
-
-      <div class="mobile-menu" id="mobile-menu" data-mobile-menu aria-label="모바일 메뉴">
-        <a href="index.html" data-nav-link>Home</a>
-        <a href="notice.html" data-nav-link>공지사항</a>
-        <a href="download.html" data-nav-link>자료실</a>
-        <a href="install-guide.html" data-nav-link>설치 가이드</a>
-        <a href="allowed-mods.html" data-nav-link>허용 모드</a>
-        <div class="theme-switch" aria-label="모바일 테마 전환">
-          <button type="button" class="theme-toggle" data-theme-value="light" aria-pressed="false">LIGHT</button>
-          <button type="button" class="theme-toggle" data-theme-value="dark" aria-pressed="false">DARK</button>
-        </div>
+      <div class="doc-card !p-4">
+        <strong class="block text-on-surface mb-2">초기 위치</strong>
+        <span class="text-sm text-on-surface-variant leading-relaxed">기본 위치로 되돌리기</span>
+      </div>
+      <div class="doc-card !p-4">
+        <strong class="block text-on-surface mb-2">HUD 크기</strong>
+        <span class="text-sm text-on-surface-variant leading-relaxed">HUD 크기 변경</span>
       </div>
     </div>
-  </header>
+  </article>
 
-  <main class="page-main">
-  <section class="page-hero">
-    <div class="container">
-      <article class="glass page-hero-card reveal">
-        <span class="eyebrow page-eyebrow">Client Mod Guide</span>
-        <div class="page-hero-top">
-          <div>
-            <h1 class="page-title">띵팩 타이머 설치 가이드</h1>
-            <p class="page-summary">띵팩 타이머는 띵타이쿤 온라인에서 곡나가와 광석 골렘 쿨타임을 더 편하게 확인할 수 있도록 도와주는 클라이언트 전용 모드입니다.</p>
-          </div>
-          <div class="page-meta">
-            <span class="badge">Fabric 1.21.4</span>
-            <span class="badge">클라이언트 전용</span>
-          </div>
-        </div>
-      </article>
+  <article class="resource-card">
+    <div class="text-[10px] tracking-[0.25em] uppercase text-primary font-bold mb-3">작동 방식</div>
+    <h2 class="font-headline text-3xl font-bold mb-3">4. 타이머 작동 방식</h2>
+    <div class="space-y-4">
+      <div class="doc-card !p-4">
+        <strong class="block text-on-surface mb-2">곡괭이 나가신다! 스킬을 활성화했습니다.</strong>
+        <span class="text-sm text-on-surface-variant leading-relaxed">곡나가 남은시간 / 쿨타임 시작</span>
+      </div>
+      <div class="doc-card !p-4">
+        <strong class="block text-on-surface mb-2">광석 골렘이 등장했습니다!</strong>
+        <span class="text-sm text-on-surface-variant leading-relaxed">광석 골렘 쿨타임 5분 시작</span>
+      </div>
     </div>
-  </section>
+  </article>
+</section>
 
-  <section class="section compact">
-    <div class="container guide-grid three">
-      <article class="guide-mini-card reveal">
-        <span class="guide-label">준비 단계</span>
-        <h3>1. 사용 전 준비</h3>
-        <ul>
-          <li>Fabric 1.21.4 환경에서 사용해 주세요.</li>
-          <li>다운로드한 모드 JAR 파일을 <span class="inline-code">.minecraft/mods</span> 폴더에 넣어 주세요.</li>
-          <li>게임 실행 후 조작키 설정에서 <strong>띵팩 타이머 설정 열기</strong> 키를 확인할 수 있습니다.</li>
-        </ul>
-      </article>
-      <article class="guide-mini-card reveal">
-        <span class="guide-label">설정창</span>
-        <h3>2. 설정창 열기</h3>
-        <ul>
-          <li>설정한 키를 누르면 <strong>띵팩 타이머</strong> 설정창이 열립니다.</li>
-          <li>곡나가 레벨 / HUD 표시 / 광석 골렘 쿨타임 표시</li>
-          <li>쿨타임 종료 시 표시 / HUD 위치 편집 / 타이머 초기화</li>
-        </ul>
-      </article>
-      <article class="guide-mini-card reveal">
-        <span class="guide-label">제작자</span>
-        <h3>미아</h3>
-        <p>띵팩 타이머 모드 제작자 표기입니다.</p>
-      </article>
+<section class="grid grid-cols-1 xl:grid-cols-2 gap-6 mb-14">
+  <article class="doc-card">
+    <div class="text-[10px] tracking-[0.25em] uppercase text-primary font-bold mb-3">설정창 / HUD 예시</div>
+    <h2 class="font-headline text-3xl font-bold mb-4">보조 이미지</h2>
+    <p class="text-sm text-on-surface-variant leading-relaxed mb-5">설정창과 HUD 관련 이미지는 이해를 돕는 참고 자료로만 사용합니다. 지금 단계에서는 과하게 넣지 않고, 추후 실제 캡처가 정리되면 교체하기 쉬운 구조로 두었습니다.</p>
+    <div class="preview-frame">
+      <img src="assets/images/timer-comingsoon-ref.png" alt="띵팩 타이머 가이드 참고 이미지"/>
     </div>
-  </section>
+  </article>
 
-  <section class="section compact">
-    <div class="container guide-grid two">
-      <article class="guide-panel reveal">
-        <span class="guide-label">HUD 편집</span>
-        <h3>3. HUD 위치 및 크기 조절</h3>
-        <p>HUD 위치 편집을 누르면 HUD 편집 화면으로 들어갑니다. 편집 화면에서는 마우스로 HUD를 직접 드래그해서 위치를 옮길 수 있습니다.</p>
-        <div class="guide-grid three" style="margin-top:18px">
-          <div class="guide-signal-card"><strong>완료</strong><span>편집 종료</span></div>
-          <div class="guide-signal-card"><strong>초기 위치</strong><span>기본 위치로 되돌리기</span></div>
-          <div class="guide-signal-card"><strong>HUD 크기</strong><span>HUD 크기 변경</span></div>
-        </div>
-      </article>
-      <article class="guide-panel reveal">
-        <span class="guide-label">작동 방식</span>
-        <h3>4. 타이머 작동 방식</h3>
-        <div class="guide-signal">
-          <div class="guide-signal-card"><strong>곡괭이 나가신다! 스킬을 활성화했습니다.</strong><span>곡나가 남은시간 / 쿨타임 시작</span></div>
-          <div class="guide-signal-card"><strong>광석 골렘이 등장했습니다!</strong><span>광석 골렘 쿨타임 5분 시작</span></div>
-        </div>
-      </article>
-    </div>
-  </section>
+  <article class="doc-card">
+    <div class="text-[10px] tracking-[0.25em] uppercase text-primary font-bold mb-3">참고 사항</div>
+    <h2 class="font-headline text-3xl font-bold mb-4">5. 참고 사항</h2>
+    <ul class="space-y-3 text-sm text-on-surface-variant leading-relaxed">
+      <li>• 본 모드는 클라이언트 전용입니다.</li>
+      <li>• 게임 내 채팅/알림 문구를 감지해서 작동합니다.</li>
+      <li>• 서버 문구가 변경되면 일부 기능이 정상 작동하지 않을 수 있습니다.</li>
+      <li>• 다른 HUD 모드와 함께 사용할 경우 위치가 겹칠 수 있습니다.</li>
+    </ul>
+  </article>
+</section>
+</div></main>
 
-  <section class="section compact">
-    <div class="container guide-grid two">
-      <article class="guide-image-card reveal">
-        <span class="guide-label">설정창 예시</span>
-        <h3>설정창과 HUD 예시</h3>
-        <p>가이드 이해를 돕는 참고 이미지입니다.</p>
-        <div class="guide-image-frame"><img src="assets/images/timer-settings-example.png" alt="띵팩 타이머 설정창 예시"></div>
-        <div class="guide-image-frame" style="margin-top:16px"><img src="assets/images/timer-hud-example.png" alt="띵팩 타이머 HUD 예시"></div>
-      </article>
-      <article class="guide-panel reveal">
-        <span class="guide-label">참고 사항</span>
-        <h3>5. 참고 사항</h3>
-        <ul>
-          <li>본 모드는 클라이언트 전용입니다.</li>
-          <li>게임 내 채팅/알림 문구를 감지해서 작동합니다.</li>
-          <li>서버 문구가 변경되면 일부 기능이 정상 작동하지 않을 수 있습니다.</li>
-          <li>다른 HUD 모드와 함께 사용할 경우 위치가 겹칠 수 있습니다.</li>
-        </ul>
-      </article>
-    </div>
-  </section>
-
-  <section class="section compact">
-    <div class="container guide-grid two">
-      <article class="guide-panel reveal">
-        <span class="guide-label">빠른 설치 순서</span>
-        <h3>초보자용 기본 흐름</h3>
-        <ol>
-          <li>Fabric 1.21.4 환경 준비</li>
-          <li>다운로드한 모드 파일을 mods 폴더에 넣기</li>
-          <li>게임 실행 후 설정창 열기 키 확인</li>
-          <li>HUD 표시와 알림 항목 점검</li>
-          <li>게임 내 문구가 정상 감지되는지 확인</li>
-        </ol>
-      </article>
-      <article class="guide-panel reveal">
-        <span class="guide-label">버전 / 충돌</span>
-        <h3>확인하면 좋은 항목</h3>
-        <ul>
-          <li>사용 중인 마인크래프트 버전과 모드 버전이 맞는지 확인해 주세요.</li>
-          <li>다른 HUD 모드가 화면 위치를 덮고 있지 않은지 확인해 주세요.</li>
-          <li>문구 감지가 되지 않으면 서버 문구 변경 여부를 먼저 점검해 주세요.</li>
-        </ul>
-      </article>
-    </div>
-  </section>
-</main>
-  <script src="assets/js/site.js"></script>
-</body>
-</html>
+<script src="assets/js/site.js"></script>
+</body></html>

@@ -1,208 +1,122 @@
 <!DOCTYPE html>
-<html lang="ko">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>자료실 - DDING PACK</title>
-  <meta name="description" content="리소스팩과 기타 배포자료를 한곳에서 정리한 DDING PACK 자료실 페이지" />
-  <meta name="theme-color" content="#071019" />
-  <link rel="stylesheet" href="assets/css/style.css" />
-</head>
-<body data-page="download">
-  <div class="site-bg" aria-hidden="true">
-    <div class="site-orb orb-a"></div>
-    <div class="site-orb orb-b"></div>
-    <div class="site-orb orb-c"></div>
+<html class="dark" lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<meta content="#0c0e13" name="theme-color"/>
+<link href="assets/branding/favicon-32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="assets/branding/apple-touch-icon.png" rel="apple-touch-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Manrope:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+  tailwind.config = {
+    darkMode: 'class',
+    theme: { extend: {
+      colors: {
+        "on-primary-container": "#00087d","on-surface-variant": "#aaabb1","on-surface": "#f0f0f7","tertiary-fixed-dim": "#87f09f",
+        "surface": "#0c0e13","on-secondary-fixed-variant": "#585c63","secondary": "#dfe2eb","primary-fixed": "#8e98ff",
+        "secondary-dim": "#d1d4dd","secondary-fixed-dim": "#d1d4dd","error": "#ff6e84","surface-container": "#171a1f",
+        "primary": "#9fa7ff","on-primary-fixed-variant": "#000b98","surface-bright": "#292c33","outline-variant": "#46484d",
+        "on-tertiary-container": "#00632e","secondary-fixed": "#dfe2eb","surface-container-low": "#111318","on-tertiary-fixed-variant": "#006e34",
+        "on-secondary-container": "#cdd0d9","tertiary": "#deffdf","error-dim": "#d73357","outline": "#74757b",
+        "surface-dim": "#0c0e13","surface-container-highest": "#23262c","inverse-primary": "#404dda","surface-container-high": "#1d2026",
+        "tertiary-fixed": "#95ffac","on-tertiary": "#006c33","background": "#0c0e13","error-container": "#a70138",
+        "on-error-container": "#ffb2b9","tertiary-dim": "#87f09f","on-error": "#490013","surface-variant": "#23262c",
+        "surface-tint": "#9fa7ff","on-tertiary-fixed": "#004e23","on-secondary-fixed": "#3b3f46","primary-container": "#8e98ff",
+        "inverse-on-surface": "#53555a","on-primary-fixed": "#000000","primary-fixed-dim": "#7d88ff","tertiary-container": "#95ffac",
+        "on-primary": "#000c9f","on-secondary": "#4e5259","secondary-container": "#43474e","primary-dim": "#5764f1",
+        "inverse-surface": "#f9f9ff","surface-container-lowest": "#000000","on-background": "#f0f0f7"
+      },
+      borderRadius: { DEFAULT: '0.125rem', lg: '0.25rem', xl: '0.5rem', full: '0.75rem' },
+      fontFamily: { headline: ['Manrope'], body: ['Inter'], label: ['Inter'] }
+    }}
+  }
+</script>
+<style>
+.material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;vertical-align:middle}
+body{min-height:max(884px,100dvh)}
+.glass-panel{background:rgba(23,26,31,.6);backdrop-filter:blur(20px)}
+.ghost-border{border:1px solid rgba(70,72,77,.15)}
+.step-gradient{background:linear-gradient(135deg,#9fa7ff 0%,#5764f1 100%)}
+</style>
+<link href="assets/css/theme.css" rel="stylesheet"/>
+<title>다운로드 · DDING PACK</title><meta content="띵타이쿤 온라인 유저를 위한 띵팩 공식 배포 허브" name="description"/></head><body class="bg-background text-on-surface font-body selection:bg-primary/30 selection:text-primary"><aside class="site-sidebar hidden md:flex h-full w-72 fixed left-0 top-0 border-r border-outline-variant/15 bg-surface-container-low z-[60] flex-col gap-2 overflow-y-auto py-5">
+<div class="px-5 mb-5 pt-4"><div class="brand-wrap"><div class="brand-mark"><img alt="띵팩 로고" class="brand-mark-img" src="assets/branding/logo-sidebar.png"/></div><div><h2 class="font-headline font-extrabold text-primary text-2xl tracking-tighter uppercase">DDING PACK</h2><p class="text-[10px] text-on-surface-variant tracking-[0.3em] font-medium mt-1 uppercase">Official Hub</p></div></div></div>
+<nav class="site-nav"><a class="nav-item" href="index.html"><span class="material-symbols-outlined">home</span><div class="flex-1 min-w-0"><div class="font-medium text-sm tracking-wide">홈</div><div class="text-[11px] text-on-surface-variant leading-relaxed">배포 허브 개요</div></div></a><a class="nav-item is-current" href="download.html"><span class="material-symbols-outlined">download</span><div class="flex-1 min-w-0"><div class="font-medium text-sm tracking-wide">다운로드</div><div class="text-[11px] text-on-surface-variant leading-relaxed">배포 파일 확인</div></div></a><a class="nav-item" href="install-guide.html"><span class="material-symbols-outlined">menu_book</span><div class="flex-1 min-w-0"><div class="font-medium text-sm tracking-wide">설치 가이드</div><div class="text-[11px] text-on-surface-variant leading-relaxed">순서와 필수 모드</div></div></a><a class="nav-item" href="allowed-mods.html"><span class="material-symbols-outlined">extension</span><div class="flex-1 min-w-0"><div class="font-medium text-sm tracking-wide">허용 모드</div><div class="text-[11px] text-on-surface-variant leading-relaxed">화이트리스트와 참고 링크</div></div></a><a class="nav-item" href="notice.html"><span class="material-symbols-outlined">campaign</span><div class="flex-1 min-w-0"><div class="font-medium text-sm tracking-wide">공지 / 업데이트</div><div class="text-[11px] text-on-surface-variant leading-relaxed">운영 공지와 변경점</div></div></a><a class="nav-item" href="faq.html"><span class="material-symbols-outlined">quiz</span><div class="flex-1 min-w-0"><div class="font-medium text-sm tracking-wide">FAQ</div><div class="text-[11px] text-on-surface-variant leading-relaxed">문제 해결과 자주 묻는 질문</div></div></a><div class="nav-divider"></div><div class="nav-section-label"><div class="text-[10px] uppercase tracking-[0.25em] text-on-surface-variant font-bold">Coming Soon</div></div><div class="nav-item is-soon"><span class="material-symbols-outlined text-on-surface-variant">diamond</span><div class="flex-1 min-w-0"><div class="flex items-center gap-2"><span class="font-medium text-sm tracking-wide text-on-secondary-container">채광 전문가</span><span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container text-[10px] font-bold tracking-widest uppercase">Soon</span></div><div class="text-[11px] text-on-surface-variant leading-relaxed">광물 특화 허브 준비 중</div></div></div><div class="nav-item is-soon"><span class="material-symbols-outlined text-on-surface-variant">potted_plant</span><div class="flex-1 min-w-0"><div class="flex items-center gap-2"><span class="font-medium text-sm tracking-wide text-on-secondary-container">재배 전문가</span><span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container text-[10px] font-bold tracking-widest uppercase">Soon</span></div><div class="text-[11px] text-on-surface-variant leading-relaxed">작물 특화 허브 준비 중</div></div></div><div class="nav-item is-soon"><span class="material-symbols-outlined text-on-surface-variant">sports_martial_arts</span><div class="flex-1 min-w-0"><div class="flex items-center gap-2"><span class="font-medium text-sm tracking-wide text-on-secondary-container">사냥 전문가</span><span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container text-[10px] font-bold tracking-widest uppercase">Soon</span></div><div class="text-[11px] text-on-surface-variant leading-relaxed">전투 특화 허브 준비 중</div></div></div><div class="nav-item is-soon"><span class="material-symbols-outlined text-on-surface-variant">sailing</span><div class="flex-1 min-w-0"><div class="flex items-center gap-2"><span class="font-medium text-sm tracking-wide text-on-secondary-container">해양 전문가</span><span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container text-[10px] font-bold tracking-widest uppercase">Soon</span></div><div class="text-[11px] text-on-surface-variant leading-relaxed">해양 특화 허브 준비 중</div></div></div><div class="nav-divider"></div><a class="nav-item is-policy" href="privacy.html"><span class="material-symbols-outlined">policy</span><div class="flex-1 min-w-0"><div class="font-medium text-sm tracking-wide">개인정보처리방침</div><div class="text-[11px] text-on-surface-variant leading-relaxed">이용 기준과 안내</div></div></a><a class="nav-item is-policy" href="terms.html"><span class="material-symbols-outlined">gavel</span><div class="flex-1 min-w-0"><div class="font-medium text-sm tracking-wide">이용약관</div><div class="text-[11px] text-on-surface-variant leading-relaxed">운영 원칙과 고지</div></div></a><div class="nav-utilities"><button class="nav-item utility-item" data-reopen-welcome=""><span class="material-symbols-outlined">replay</span><div><div class="font-medium text-sm tracking-wide">웰컴 화면 다시 보기</div><div class="text-[11px] text-on-surface-variant">첫 진입 레이어 다시 열기</div></div></button><button class="nav-item utility-item" data-theme-toggle=""><span class="material-symbols-outlined" data-theme-icon="">dark_mode</span><div><div class="font-medium text-sm tracking-wide" data-theme-label="">다크 모드</div><div class="text-[11px] text-on-surface-variant">라이트/다크 전환</div></div></button></div></nav></aside><button class="menu-fab md:hidden" data-mobile-menu="" type="button"><span class="material-symbols-outlined">menu</span></button><aside class="site-sidebar hidden md:flex h-full w-72 fixed left-0 top-0 border-r border-outline-variant/15 bg-surface-container-low z-[60] flex-col gap-2 overflow-y-auto py-5">
+<div class="px-5 mb-5 pt-4"><div class="brand-wrap"><div class="brand-mark"><img alt="띵팩 로고" class="brand-mark-img" src="assets/branding/logo-sidebar.png"/></div><div><h2 class="font-headline font-extrabold text-primary text-2xl tracking-tighter uppercase">DDING PACK</h2><p class="text-[10px] text-on-surface-variant tracking-[0.3em] font-medium mt-1 uppercase">Official Hub</p></div></div></div>
+<nav class="site-nav"><a class="nav-item" href="index.html"><span class="material-symbols-outlined">home</span><div class="flex-1 min-w-0"><div class="font-medium text-sm tracking-wide">홈</div><div class="text-[11px] text-on-surface-variant leading-relaxed">배포 허브 개요</div></div></a><a class="nav-item" href="download.html"><span class="material-symbols-outlined">download</span><div class="flex-1 min-w-0"><div class="font-medium text-sm tracking-wide">다운로드</div><div class="text-[11px] text-on-surface-variant leading-relaxed">배포 파일 확인</div></div></a><a class="nav-item" href="install-guide.html"><span class="material-symbols-outlined">menu_book</span><div class="flex-1 min-w-0"><div class="font-medium text-sm tracking-wide">설치 가이드</div><div class="text-[11px] text-on-surface-variant leading-relaxed">순서와 필수 모드</div></div></a><a class="nav-item" href="allowed-mods.html"><span class="material-symbols-outlined">extension</span><div class="flex-1 min-w-0"><div class="font-medium text-sm tracking-wide">허용 모드</div><div class="text-[11px] text-on-surface-variant leading-relaxed">화이트리스트와 참고 링크</div></div></a><a class="nav-item" href="notice.html"><span class="material-symbols-outlined">campaign</span><div class="flex-1 min-w-0"><div class="font-medium text-sm tracking-wide">공지 / 업데이트</div><div class="text-[11px] text-on-surface-variant leading-relaxed">운영 공지와 변경점</div></div></a><a class="nav-item" href="faq.html"><span class="material-symbols-outlined">quiz</span><div class="flex-1 min-w-0"><div class="font-medium text-sm tracking-wide">FAQ</div><div class="text-[11px] text-on-surface-variant leading-relaxed">문제 해결과 자주 묻는 질문</div></div></a><div class="nav-divider"></div><div class="nav-section-label"><div class="text-[10px] uppercase tracking-[0.25em] text-on-surface-variant font-bold">Coming Soon</div></div><div class="nav-item is-soon"><span class="material-symbols-outlined text-on-surface-variant">diamond</span><div class="flex-1 min-w-0"><div class="flex items-center gap-2"><span class="font-medium text-sm tracking-wide text-on-secondary-container">채광 전문가</span><span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container text-[10px] font-bold tracking-widest uppercase">Soon</span></div><div class="text-[11px] text-on-surface-variant leading-relaxed">광물 특화 허브 준비 중</div></div></div><div class="nav-item is-soon"><span class="material-symbols-outlined text-on-surface-variant">potted_plant</span><div class="flex-1 min-w-0"><div class="flex items-center gap-2"><span class="font-medium text-sm tracking-wide text-on-secondary-container">재배 전문가</span><span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container text-[10px] font-bold tracking-widest uppercase">Soon</span></div><div class="text-[11px] text-on-surface-variant leading-relaxed">작물 특화 허브 준비 중</div></div></div><div class="nav-item is-soon"><span class="material-symbols-outlined text-on-surface-variant">sports_martial_arts</span><div class="flex-1 min-w-0"><div class="flex items-center gap-2"><span class="font-medium text-sm tracking-wide text-on-secondary-container">사냥 전문가</span><span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container text-[10px] font-bold tracking-widest uppercase">Soon</span></div><div class="text-[11px] text-on-surface-variant leading-relaxed">전투 특화 허브 준비 중</div></div></div><div class="nav-item is-soon"><span class="material-symbols-outlined text-on-surface-variant">sailing</span><div class="flex-1 min-w-0"><div class="flex items-center gap-2"><span class="font-medium text-sm tracking-wide text-on-secondary-container">해양 전문가</span><span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container text-[10px] font-bold tracking-widest uppercase">Soon</span></div><div class="text-[11px] text-on-surface-variant leading-relaxed">해양 특화 허브 준비 중</div></div></div><div class="nav-divider"></div><a class="nav-item is-policy" href="privacy.html"><span class="material-symbols-outlined">policy</span><div class="flex-1 min-w-0"><div class="font-medium text-sm tracking-wide">개인정보처리방침</div><div class="text-[11px] text-on-surface-variant leading-relaxed">이용 기준과 안내</div></div></a><a class="nav-item is-policy" href="terms.html"><span class="material-symbols-outlined">gavel</span><div class="flex-1 min-w-0"><div class="font-medium text-sm tracking-wide">이용약관</div><div class="text-[11px] text-on-surface-variant leading-relaxed">운영 원칙과 고지</div></div></a><div class="nav-utilities"><button class="nav-item utility-item" data-reopen-welcome=""><span class="material-symbols-outlined">replay</span><div><div class="font-medium text-sm tracking-wide">웰컴 화면 다시 보기</div><div class="text-[11px] text-on-surface-variant">첫 진입 레이어 다시 열기</div></div></button><button class="nav-item utility-item" data-theme-toggle=""><span class="material-symbols-outlined" data-theme-icon="">dark_mode</span><div><div class="font-medium text-sm tracking-wide" data-theme-label="">다크 모드</div><div class="text-[11px] text-on-surface-variant">라이트/다크 전환</div></div></button></div></nav></aside>
+<div class="mobile-drawer fixed inset-0 z-[70] hidden" data-mobile-drawer=""><div class="absolute inset-0 bg-black/50" data-mobile-close=""></div><div class="absolute inset-y-0 left-0 w-[min(88vw,320px)] bg-surface-container-low border-r border-outline-variant/15 p-6 overflow-y-auto"><div class="flex items-center justify-between pt-4 mb-8"><div class="flex items-center gap-3"><img alt="" class="w-10 h-10 rounded-lg" src="assets/branding/logo-slot.png"/><div><div class="font-headline font-extrabold tracking-tighter text-primary uppercase">DDING PACK</div><div class="text-[10px] uppercase tracking-[0.25em] text-on-surface-variant">Official Hub</div></div></div><button class="text-on-surface" data-mobile-close=""><span class="material-symbols-outlined">close</span></button></div><nav class="flex flex-col gap-2"><a class="flex items-center gap-3 px-4 py-3 bg-primary/10 text-primary border-l-4 border-primary font-bold translate-x-1 duration-200" href="index.html"><span class="material-symbols-outlined">home</span><div class="flex-1 min-w-0"><div class="font-medium text-sm tracking-wide">홈</div><div class="text-[11px] text-on-surface-variant leading-relaxed">배포 허브 개요</div></div></a><a class="flex items-center gap-3 px-4 py-3 text-on-secondary-container opacity-70 hover:bg-surface-container hover:opacity-100 transition-all group" href="download.html"><span class="material-symbols-outlined">download</span><div class="flex-1 min-w-0"><div class="font-medium text-sm tracking-wide">다운로드</div><div class="text-[11px] text-on-surface-variant leading-relaxed">배포 파일 확인</div></div></a><a class="flex items-center gap-3 px-4 py-3 text-on-secondary-container opacity-70 hover:bg-surface-container hover:opacity-100 transition-all group" href="install-guide.html"><span class="material-symbols-outlined">menu_book</span><div class="flex-1 min-w-0"><div class="font-medium text-sm tracking-wide">설치 가이드</div><div class="text-[11px] text-on-surface-variant leading-relaxed">순서와 필수 모드</div></div></a><a class="flex items-center gap-3 px-4 py-3 text-on-secondary-container opacity-70 hover:bg-surface-container hover:opacity-100 transition-all group" href="allowed-mods.html"><span class="material-symbols-outlined">extension</span><div class="flex-1 min-w-0"><div class="font-medium text-sm tracking-wide">허용 모드</div><div class="text-[11px] text-on-surface-variant leading-relaxed">화이트리스트와 참고 링크</div></div></a><a class="flex items-center gap-3 px-4 py-3 text-on-secondary-container opacity-70 hover:bg-surface-container hover:opacity-100 transition-all group" href="notice.html"><span class="material-symbols-outlined">campaign</span><div class="flex-1 min-w-0"><div class="font-medium text-sm tracking-wide">공지 / 업데이트</div><div class="text-[11px] text-on-surface-variant leading-relaxed">운영 공지와 변경점</div></div></a><a class="flex items-center gap-3 px-4 py-3 text-on-secondary-container opacity-70 hover:bg-surface-container hover:opacity-100 transition-all group" href="faq.html"><span class="material-symbols-outlined">quiz</span><div class="flex-1 min-w-0"><div class="font-medium text-sm tracking-wide">FAQ</div><div class="text-[11px] text-on-surface-variant leading-relaxed">문제 해결과 자주 묻는 질문</div></div></a><a class="flex items-center gap-3 px-4 py-3 text-on-secondary-container opacity-70 hover:bg-surface-container hover:opacity-100 transition-all group" href="privacy.html"><span class="material-symbols-outlined">policy</span><div class="flex-1 min-w-0"><div class="font-medium text-sm tracking-wide">개인정보처리방침</div><div class="text-[11px] text-on-surface-variant leading-relaxed">이용 기준과 안내</div></div></a><a class="flex items-center gap-3 px-4 py-3 text-on-secondary-container opacity-70 hover:bg-surface-container hover:opacity-100 transition-all group" href="terms.html"><span class="material-symbols-outlined">gavel</span><div class="flex-1 min-w-0"><div class="font-medium text-sm tracking-wide">이용약관</div><div class="text-[11px] text-on-surface-variant leading-relaxed">운영 원칙과 고지</div></div></a></nav></div></div>
+
+<main class="md:pl-72 min-h-screen"><div class="pt-8 pb-16 px-6 md:px-12 max-w-7xl mx-auto">
+<section class="mb-16">
+  <div class="relative h-[300px] rounded-xl overflow-hidden mb-8 group bg-surface-container-lowest">
+    <div class="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent z-10"></div>
+    <img alt="" class="w-full h-full object-cover opacity-50" src="assets/branding/logo-welcome.png"/>
+    <div class="absolute left-8 right-8 bottom-8 z-20">
+      <span class="text-[10px] tracking-[0.25em] uppercase text-primary font-bold mb-2 block">Distribution Archive</span>
+      <h1 class="font-headline text-4xl md:text-6xl font-black tracking-tighter mb-4">배포 자료를 종류별로 정리했습니다</h1>
+      <p class="text-on-surface-variant text-base md:text-lg max-w-3xl leading-relaxed">리소스팩과 모드를 구분해, 어떤 자료를 받아야 하는지 바로 이해할 수 있도록 구성했습니다.</p>
+    </div>
   </div>
-
-  <header class="site-header">
-    <div class="header-shell">
-      <a class="brand" href="index.html" aria-label="DDING PACK 홈으로 이동">
-        <span class="brand-mark" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none">
-            <path d="M5 8.5 12 4l7 4.5v7L12 20l-7-4.5v-7Z" stroke="currentColor" stroke-width="1.8"/>
-            <path d="M12 4v16M5 8.5l7 4 7-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-          </svg>
-        </span>
-        <span class="brand-copy">
-          <span class="brand-title">DDING PACK</span>
-          <span class="brand-subtitle">Minecraft Resource Archive</span>
-        </span>
-      </a>
-
-      <div class="header-right">
-        <nav class="site-nav" aria-label="주요 메뉴">
-          <a href="index.html" data-nav-link>Home</a>
-          <a href="notice.html" data-nav-link>공지사항</a>
-          <a href="download.html" data-nav-link>자료실</a>
-          <a href="install-guide.html" data-nav-link>설치 가이드</a>
-          <a href="allowed-mods.html" data-nav-link>허용 모드</a>
-        </nav>
-
-        <div class="toolbar-group">
-          <div class="theme-switch" aria-label="테마 전환">
-            <button type="button" class="theme-toggle" data-theme-value="light" aria-pressed="false">LIGHT</button>
-            <button type="button" class="theme-toggle" data-theme-value="dark" aria-pressed="false">DARK</button>
-          </div>
-
-          <button
-            class="menu-toggle"
-            type="button"
-            data-menu-toggle
-            aria-expanded="false"
-            aria-controls="mobile-menu"
-            aria-label="메뉴 열기"
-          >
-            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path d="M5 7h14M5 12h14M5 17h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-            </svg>
-          </button>
+</section>
+<section class="mb-14">
+  <div class="mb-6">
+    <span class="text-[10px] tracking-[0.25em] uppercase text-primary font-bold mb-2 block">Resource Packs</span>
+    <h2 class="font-headline text-3xl font-bold mb-3">리소스팩</h2>
+    <p class="text-sm text-on-surface-variant leading-relaxed max-w-3xl">특수광물 리소스팩 배포본을 기본 배포본과 대체용 배포본으로 나눠 제공합니다.</p>
+  </div>
+  <div class="grid grid-cols-1 xl:grid-cols-2 gap-6">
+    <article class="bg-surface-container-high rounded-xl p-8 ghost-border flex flex-col gap-6">
+      <div class="flex items-start justify-between gap-4">
+        <div>
+          <span class="inline-flex items-center px-3 py-1 rounded-full bg-primary/10 text-primary text-[10px] font-bold tracking-[0.24em] uppercase">기본 배포본</span>
+          <h3 class="font-headline text-3xl font-bold mt-4">특수광물 발광 + 테두리 리소스팩</h3>
+          <p class="text-sm text-on-surface-variant leading-relaxed mt-4">가장 먼저 받는 기본 배포본입니다. 특수광물의 발광 효과와 테두리를 함께 표시하는 기본 리소스팩입니다.</p>
         </div>
       </div>
-
-      <div class="mobile-menu" id="mobile-menu" data-mobile-menu aria-label="모바일 메뉴">
-        <a href="index.html" data-nav-link>Home</a>
-        <a href="notice.html" data-nav-link>공지사항</a>
-        <a href="download.html" data-nav-link>자료실</a>
-        <a href="install-guide.html" data-nav-link>설치 가이드</a>
-        <a href="allowed-mods.html" data-nav-link>허용 모드</a>
-        <div class="theme-switch" aria-label="모바일 테마 전환">
-          <button type="button" class="theme-toggle" data-theme-value="light" aria-pressed="false">LIGHT</button>
-          <button type="button" class="theme-toggle" data-theme-value="dark" aria-pressed="false">DARK</button>
+      <div class="mt-auto flex items-center justify-between gap-4 flex-wrap pt-5 border-t border-outline-variant/10">
+        <div class="text-xs text-on-surface-variant uppercase tracking-[0.24em] font-bold">Primary Pack</div>
+        <a class="px-5 py-3 rounded-md bg-primary text-on-primary font-bold inline-flex items-center gap-2 whitespace-nowrap" href="https://drive.google.com/uc?export=download&id=1o4vbMMH-lrfdb5uNVW2ilDM_4YgNHrlg" rel="noopener" target="_blank"><span class="material-symbols-outlined text-sm">download</span>다운로드</a>
+      </div>
+    </article>
+    <article class="bg-surface-container-high rounded-xl p-8 ghost-border flex flex-col gap-6">
+      <div class="flex items-start justify-between gap-4">
+        <div>
+          <span class="inline-flex items-center px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container text-[10px] font-bold tracking-[0.24em] uppercase">추가 배포본</span>
+          <h3 class="font-headline text-3xl font-bold mt-4">띵타이쿤 특수광물 테두리 베타 리소스팩</h3>
+          <p class="text-sm text-on-surface-variant leading-relaxed mt-4">특수광물의 테두리만 표시되는 베타 리소스팩입니다. 발광 테두리 리소스팩을 사용하지 못하는 사용자를 위한 대체 버전입니다.</p>
         </div>
       </div>
-    </div>
-  </header>
-
-  <main class="page-main">
-
-    <section class="page-hero">
-      <div class="container">
-        <article class="glass page-hero-card reveal">
-          <span class="eyebrow page-eyebrow">Archive</span>
-          <div class="page-hero-top">
-            <div>
-              <h1 class="page-title">자료실</h1>
-              <p class="page-summary">
-                리소스팩과 기타 배포자료를 한곳에서 정리해두는 페이지입니다.
-                추후 항목이 늘어나더라도 같은 구조 안에서 계속 추가할 수 있도록 구성했습니다.
-              </p>
-            </div>
-            <div class="page-meta">
-              <span class="badge">다운로드 링크 유지</span>
-              <span class="badge">상대경로 유지</span>
-            </div>
-          </div>
-        </article>
+      <div class="mt-auto flex items-center justify-between gap-4 flex-wrap pt-5 border-t border-outline-variant/10">
+        <div class="text-xs text-on-surface-variant uppercase tracking-[0.24em] font-bold">Alternative Pack</div>
+        <a class="px-5 py-3 rounded-md bg-primary text-on-primary font-bold inline-flex items-center gap-2 whitespace-nowrap" href="https://drive.google.com/uc?export=download&id=1fEy0s3P07qzd2UfchVwLpyM7oOVYIN-Z" rel="noopener" target="_blank"><span class="material-symbols-outlined text-sm">download</span>다운로드</a>
       </div>
-    </section>
-
-    <section class="section compact">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow page-eyebrow">Resource Pack</span>
-          <h2>리소스팩 배포 목록</h2>
-          <p class="lead">
-            원본 자료실의 다운로드 링크와 항목 상태를 그대로 유지하면서, 카드 레이아웃과 정보 위계를 더 또렷하게 정리했습니다.
-          </p>
-        </div>
-
-        <div class="cards-grid cols-2">
-          <article class="glass-card card reveal">
-            <div class="card-top">
-              <div class="card-title-group">
-                <h3>띵타이쿤 온라인 특수광물 v1.0.0</h3>
-                <p>광물 + 테두리 발광 처리된 현재 공식 배포본입니다. 지금 다운로드 가능한 기본 리소스팩 항목입니다.</p>
-              </div>
-              <span class="badge status-allowed">공개 중</span>
-            </div>
-            <div class="meta-list">
-              <div class="meta-item"><span>다운로드 방식</span><strong>기존 Google Drive 링크</strong></div>
-              <div class="meta-item"><span>연결 상태</span><strong>원본 경로 유지</strong></div>
-            </div>
-            <div class="button-row">
-              <a class="btn btn-primary" href="https://drive.google.com/uc?export=download&id=1OlkC1ugpicV5JC8AhhGAEW-Y0J9-2XF9" target="_blank" rel="noopener">다운로드</a>
-            </div>
-          </article>
-
-          <article class="glass-card card reveal">
-            <div class="card-top">
-              <div class="card-title-group">
-                <h3>테두리 전용 버전</h3>
-                <p>미지원 환경 사용자를 위한 별도 배포용 항목입니다. 아직 준비 중이며, 추후 이 페이지에 추가될 예정입니다.</p>
-              </div>
-              <span class="badge status-warning">준비 중</span>
-            </div>
-            <p>실제 파일이 없는 상태이므로 새 다운로드 링크를 만들지 않고, 원본의 안내 상태를 유지했습니다.</p>
-          </article>
+    </article>
+  </div>
+</section>
+<section class="mb-14">
+  <div class="mb-6">
+    <span class="text-[10px] tracking-[0.25em] uppercase text-primary font-bold mb-2 block">Modules</span>
+    <h2 class="font-headline text-3xl font-bold mb-3">모드</h2>
+    <p class="text-sm text-on-surface-variant leading-relaxed max-w-3xl">리소스팩과 별도로 동작하는 띵팩 전용 보조 모드 배포 영역입니다.</p>
+  </div>
+  <div class="grid grid-cols-1 xl:grid-cols-2 gap-6">
+    <article class="bg-surface-container-high rounded-xl p-8 ghost-border flex flex-col gap-6 opacity-90">
+      <div class="flex items-start justify-between gap-4">
+        <div>
+          <span class="inline-flex items-center px-3 py-1 rounded-full border border-outline-variant/20 text-on-surface-variant text-[10px] font-bold tracking-[0.24em] uppercase">Coming Soon</span>
+          <h3 class="font-headline text-3xl font-bold mt-4">띵팩 타이머</h3>
+          <p class="text-sm text-on-surface-variant leading-relaxed mt-4">띵팩 전용 보조 모드입니다. 현재 배포 준비 중이며, 추후 실제 배포 링크가 연결되면 같은 위치에서 바로 다운로드할 수 있도록 구조를 먼저 준비했습니다.</p>
         </div>
       </div>
-    </section>
-
-    <section class="section compact">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="eyebrow page-eyebrow">Related Material</span>
-          <h2>기타 배포자료</h2>
-          <p class="lead">
-            설치 순서, 적용 예시, 필수 모드 링크 등 사용자가 참고할 수 있는 관련 자료를 이후 이 영역에 함께 정리할 수 있습니다.
-          </p>
-        </div>
-
-        <div class="cards-grid cols-2">
-          <article class="glass-card card reveal">
-            <div class="card-top">
-              <div class="card-title-group">
-                <h3>설치 가이드 참고 자료</h3>
-                <p>설치 순서, 적용 예시, 필수 모드 링크 등 사용자가 참고할 수 있는 관련 자료입니다.</p>
-              </div>
-              <span class="badge">Guide</span>
-            </div>
-            <div class="button-row">
-              <a class="btn btn-secondary" href="install-guide.html">보러가기</a>
-            </div>
-          </article>
-
-          <article class="glass-card card empty-card reveal">
-            <div class="card-top">
-              <div class="card-title-group">
-                <h3>추후 확장 영역</h3>
-                <p>원본 자료실이 이후에도 같은 틀 안에서 항목을 늘릴 수 있도록 설계되어 있었기 때문에, 새 디자인도 확장 가능한 카드 기반 구조를 유지했습니다.</p>
-              </div>
-              <span class="badge">Future Ready</span>
-            </div>
-            <p class="inline-note">새 파일이 추가되면 같은 카드 컴포넌트 안에 이어서 넣을 수 있습니다.</p>
-          </article>
-        </div>
+      <div class="mt-auto flex items-center justify-between gap-4 flex-wrap pt-5 border-t border-outline-variant/10">
+        <div class="text-xs text-on-surface-variant uppercase tracking-[0.24em] font-bold">Timer Module</div>
+        <button class="px-5 py-3 rounded-md border border-outline-variant/20 text-on-surface-variant font-bold inline-flex items-center gap-2 opacity-70 cursor-not-allowed whitespace-nowrap" type="button" disabled><span class="material-symbols-outlined text-sm">schedule</span>준비 중</button>
       </div>
-    </section>
-
-  </main>
-
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-shell">
-        <div class="footer-top">
-          <div>
-            <h2 class="footer-title">DDING PACK</h2>
-            <p class="footer-highlight">띵타이쿤 플레이어를 위한 비공식 리소스팩 배포 페이지</p>
-            <p class="footer-desc">DDING PACK은 띵타이쿤 유저를 위해 제작된 비공식 리소스팩 사이트이며, 공식 운영진과 무관합니다.</p>
-            <p class="footer-desc">사이트 내 사용된 게임 관련 명칭 및 리소스의 출처와 권리는 “띵타이쿤 온라인”에 있습니다.</p>
-          </div>
-          <div class="footer-links">
-            <a href="privacy.html">개인정보처리방침</a>
-            <a href="terms.html">이용약관</a>
-            <span>© 2026 DDING PACK</span>
-          </div>
-        </div>
-        <div class="footer-bottom">
-          <span>정적 배포 구조 · 다운로드 링크와 상대경로 유지</span>
-          <span>문의 및 개선 요청은 우측 하단 채널톡을 이용해 주세요.</span>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <script src="assets/js/site.js"></script>
-</body>
-</html>
+    </article>
+  </div>
+</section>
+</div></main>
+<script src="assets/js/site.js"></script></body></html>
